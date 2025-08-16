@@ -8,6 +8,7 @@ docker run --name jenkins \
 -p 8080:8080 \
 -p 50000:50000 \
 -d -v jenkins_home:/var/jenkins_home \
+--restart unless-stopped \
 jenkins/jenkins:lts
 
 # port 50000 是jenkins master node與worker node溝通的port
