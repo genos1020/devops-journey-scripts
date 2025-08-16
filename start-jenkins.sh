@@ -10,3 +10,5 @@ docker run --name jenkins \
 -d -v jenkins_home:/var/jenkins_home \
 jenkins/jenkins:lts
 
+# port 50000 是jenkins master node與worker node溝通的port
+# 但現階段還沒有建立jenkins cluster, 所以此port還不會被用到
