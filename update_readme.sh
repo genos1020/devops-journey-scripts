@@ -49,4 +49,4 @@ awk -v start="$START_MARK" -v end="$END_MARK" -v list="$(printf "%s\n" "${new_li
     skip != 1 {print}
 ' "$README" > "$README.tmp" && mv "$README.tmp" "$README"
 
-echo "✅ README.md 已更新（多空格問題已修正）"
+echo "✅ README.md 已更新"
