@@ -8,8 +8,9 @@ services:
       - "8080:8080"
       - "50000:50000"
     volumes:
-      - jenkins_home:/var/jenkins_home
+      - jenkins_home:/var/jenkins_home 
+      - /var/run/docker.sock:/var/run/docker.sock # 將宿主機的docker socket mount進容器中，如此在容器中就能操作宿主機的docker
     restart: always
 
 volumes:
-  jenkins_home:
+  jenkins_home: # Named Volume => Docker 自己管理的一塊存儲區

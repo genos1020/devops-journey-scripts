@@ -22,4 +22,6 @@ scripts:
 
   - file: start-jenkins-compose.yaml
     desc: |
-      改用docker compose，會等 daemon 準備好才拉容器，所以更可靠
+      - 改用docker compose，會等 daemon 準備好才拉容器，所以更可靠
+      - /var/run/docker.sock:/var/run/docker.sock 
+        - 將宿主機的docker socket mount進容器中，如此在容器中就能操作宿主機的docker

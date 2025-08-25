@@ -17,5 +17,7 @@ Scripts from my DevOps self-study journey.
   - 如果 還沒建立過 → 用 docker run 建立（帶 --restart always)
   - 如果 已存在 → 就用 docker start 直接啟動，不會重複建立
 - [start-jenkins-compose.yaml](./start-jenkins-compose.yaml)
-  改用docker compose，會等 daemon 準備好才拉容器，所以更可靠
+  - 改用docker compose，會等 daemon 準備好才拉容器，所以更可靠
+  - /var/run/docker.sock:/var/run/docker.sock 
+    - 將宿主機的docker socket mount進容器中，如此在容器中就能操作宿主機的docker
 <!-- SCRIPTS-LIST:END -->
